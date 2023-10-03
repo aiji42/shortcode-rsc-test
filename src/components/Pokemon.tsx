@@ -1,7 +1,12 @@
 export const Pokemon = async ({ id }: { id: number }) => {
   const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
   const res = await fetch(url);
-  const data = await res.json();
+  const data = (await res.json()) as {
+    sprites: { front_default: string };
+    name: string;
+    types: { type: { name: string } }[];
+  };
+  if (!data) return;
 
   return (
     <div className="max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-20">
