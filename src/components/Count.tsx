@@ -1,9 +1,7 @@
 "use client";
+import { useReducer } from "react";
 
-import { Suspense, useReducer } from "react";
-import { Pokemon } from "@/components/Pokemon";
-
-export const Counter = () => {
+export const Count = () => {
   const [count, increment] = useReducer((s) => s + 1, 0);
 
   return (
