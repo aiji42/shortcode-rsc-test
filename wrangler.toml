@@ -1,0 +1,3 @@
+name = "sample-backcend"
+main = "backend/index.ts"
+compatibility_date = "2023-09-30"

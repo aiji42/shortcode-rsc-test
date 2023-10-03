@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:backend": "wrangler dev --port=3001",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -14,6 +15,7 @@
     "react-dom": "^18"
   },
   "devDependencies": {
+    "@cloudflare/workers-types": "^4.20231002.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
@@ -21,6 +23,7 @@
     "postcss": "^8",
     "prettier": "^3.0.3",
     "tailwindcss": "^3",
-    "typescript": "^5"
+    "typescript": "^5",
+    "wrangler": "^3.10.1"
   }
 }
